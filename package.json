@@ -6,8 +6,11 @@
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "type-check": "tsc --noEmit",
+    "export": "next export"
   },
+  "packagManager": "pnpm@9.0.0",
   "dependencies": {
     "react": "19.1.0",
     "react-dom": "19.1.0",
