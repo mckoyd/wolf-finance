@@ -39,7 +39,6 @@ jobs:
       - run: pnpm -s tsc --noEmit
 
       - run: pnpm build
-      - run: pnpm export
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
