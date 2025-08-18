@@ -1,0 +1,85 @@
+/* COLOR TOKENS */
+:root {
+  /* Primary */
+  /* Beige */
+  --beige-500: #98908b;
+  --beige-100: #f8f4f0;
+
+  /* Grey */
+  --grey-900: #201f24;
+  --grey-500: #696868;
+  --grey-300: #b3b3b3;
+  --grey-100: #f2f2f2;
+
+  /* Secondary */
+  --sec-green: #277c78;
+  --sec-yellow: #f2cdac;
+  --sec-cyan: #82c9d7;
+  --sec-navy: #626070;
+  --sec-red: #c94736;
+  --sec-purple: #826cb0;
+
+  /* Other Colors */
+  --ot-purple: #af81ba;
+  --ot-turquoise: #597c7c;
+  --ot-brown: #597c7c;
+  --ot-magenta: #934f6f;
+  --ot-blue: #3f82b2;
+  --ot-navy-grey: #97a0ac;
+  --ot-army-green: #7f9161;
+  --ot-gold: #cab361;
+  --ot-orange: #be6c49;
+}
+
+/* SPACING (4px base scale)*/
+:root {
+  --space-40: 0.25rem;
+  --space-60: 0.375rem;
+  --space-80: 0.5rem;
+  --space-100: 0.75rem;
+  --space-150: 1rem;
+  --space-200: 1.25rem;
+  --space-250: 1.5rem;
+  --space-300: 2rem;
+  --space-400: 2.5rem;
+  --space-500: 3rem;
+}
+
+/* TYPOGRAPHY */
+:root {
+  /* Weights */
+  --fw-regular: 400;
+  --fw-semibold: 600;
+  --fw-bold: 700;
+
+  /* Text Presets: use weights only (family is set globally in globals.css) */
+  /* Preset 1 — 32px, 120%, 0 letter-spacing, Bold */
+  --preset-1-weight: var(--fw-bold);
+  --preset-1-size: 8rem; /* 32px with 4px base */
+  --preset-1-line-height: 120%;
+  --preset-1-letter-spacing: 0;
+
+  /* Preset 2 — keep current size/leading per guide, set weight explicitly */
+  --preset-2-weight: var(--fw-bold);
+  --preset-2-size: 5rem;
+  --preset-2-line-height: 120%;
+  --preset-2-letter-spacing: 0;
+
+  /* Preset 3 */
+  --preset-3-weight: var(--fw-bold);
+  --preset-3-size: 4rem;
+  --preset-3-line-height: 150%;
+  --preset-3-letter-spacing: 0;
+
+  /* Preset 4 */
+  --preset-4-weight: var(--fw-regular);
+  --preset-4-size: 3.5rem;
+  --preset-4-line-height: 150%;
+  --preset-4-letter-spacing: 0;
+
+  /* Preset 5 */
+  --preset-5-weight: var(--fw-regular);
+  --preset-5-size: 3rem;
+  --preset-5-line-height: 150%;
+  --preset-5-letter-spacing: 0;
+}

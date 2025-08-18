@@ -1,5 +1,8 @@
 import type { Metadata } from "next";
 
+import "./globals.css";
+import "@/styles/tokens.css";
+
 export const metadata: Metadata = {
   title: "Wolf Personal Finance App",
   description:
