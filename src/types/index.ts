@@ -32,3 +32,10 @@ export type AccountSummary = {
   budgets: Budget[];
   pots: Pot[];
 };
+
+export type TextVariant =
+  | "preset-1"
+  | "preset-2"
+  | "preset-3"
+  | "preset-4"
+  | "preset-5";
