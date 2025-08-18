@@ -1,0 +1,40 @@
+name: Chromatic (only changed, strict)
+
+on:
+  push:
+    branches: ["**"]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  chromatic:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout (full history for diffs)
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: pnpm/action-setup@v3
+        with:
+          version: 10
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: "pnpm"
+
+      - name: Install deps
+        run: pnpm install --frozen-lockfile
+
+      - name: Run Chromatic
+        run: |
+          pnpm chromatic \
+            --project-token=${CHROMATIC_PROJECT_TOKEN} \
+            --only-changed \
+            --branch-name="${GITHUB_REF_NAME}"
+        env:
+          CHROMATIC_PROJECT_TOKEN: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
