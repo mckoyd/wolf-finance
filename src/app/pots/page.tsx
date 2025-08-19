@@ -1,8 +1,8 @@
 import PageStub from "@/components/PageStub";
-import { OVERVIEW_PAGE } from "./page.config";
+import { POTS_PAGE } from "./page.config";
 
 const Page: React.FC = () => {
-  const { title, ariaLabel } = OVERVIEW_PAGE;
+  const { title, ariaLabel } = POTS_PAGE;
   return <PageStub title={title} ariaLabel={ariaLabel} />;
 };
 

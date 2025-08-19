@@ -7,6 +7,7 @@ export interface IText {
   variant?: TextVariant;
   children: React.ReactNode;
   className?: string;
+  id?: string;
   align?: keyof typeof ALIGN_CLASSES;
 }
 
@@ -16,6 +17,7 @@ const Text: React.FC<IText> = ({
   children,
   className,
   align = TEXT_DEFAULTS.align,
+  id,
 }) => {
   const variantClass = styles[variant] ?? "";
   const alignClass = align && styles[ALIGN_CLASSES[align]];
@@ -24,7 +26,11 @@ const Text: React.FC<IText> = ({
     .filter(Boolean)
     .join(" ");
 
-  return <Component className={mergedClassNames}>{children}</Component>;
+  return (
+    <Component className={mergedClassNames} id={id}>
+      {children}
+    </Component>
+  );
 };
 
 export default Text;

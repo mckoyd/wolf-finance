@@ -39,3 +39,9 @@ export type TextVariant =
   | "preset-3"
   | "preset-4"
   | "preset-5";
+
+export type PageConfig = {
+  path: string;
+  title: string;
+  ariaLabel: string;
+};
