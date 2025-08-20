@@ -45,3 +45,9 @@ export type PageConfig = {
   title: string;
   ariaLabel: string;
 };
+
+export type StatCardVariant = "balance" | "income" | "expenses";
+export type StatCardCopy = {
+  title: string;
+  ariaLabel: string;
+};

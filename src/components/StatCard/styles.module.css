@@ -1,0 +1,53 @@
+.statCard {
+  background: #ffffff;
+  border-radius: 6rem;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.04);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-500);
+  padding: 5rem;
+}
+
+.statCard__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.statCard__title {
+  margin: 0;
+  color: var(--grey-500);
+}
+
+.statCard__valueRow {
+  display: flex;
+  align-items: baseline;
+  gap: var(--space-80);
+}
+
+.statCard__value {
+  margin: 0;
+}
+
+.statCard--balance {
+  background: var(--grey-900);
+}
+
+.statCard--balance .statCard__title,
+.statCard--balance .statCard__value {
+  color: #ffffff;
+}
+
+.statCard--balance .statCard__value {
+}
+
+.statCard--income .statCard__value {
+}
+
+.statCard--expenses .statCard__value {
+}
+
+.statCard:focus-visible {
+  outline: 2px solid var(--green-500);
+  outline-offset: 2px;
+}
