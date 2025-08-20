@@ -3,7 +3,7 @@ import { resolve } from "path";
 
 const config: StorybookConfig = {
   stories: ["../src/**/*.stories.@(ts|tsx)"],
-  addons: ["@storybook/addon-essentials"],
+  addons: ["@storybook/addon-essentials", "@storybook/addon-coverage"],
   framework: { name: "@storybook/react-vite", options: {} },
   docs: { autodocs: "tag" },
   viteFinal: async (config, { configType }) => {
