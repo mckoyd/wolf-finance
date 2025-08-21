@@ -14,14 +14,3 @@ export const STAT_CARD_COPY: Record<StatCardVariant, StatCardCopy> = {
     ariaLabel: "Expenses card",
   },
 };
-
-export const formatCurrency = (
-  value: number,
-  currency = "USD",
-  locale = "en-US"
-) =>
-  new Intl.NumberFormat(locale, {
-    style: "currency",
-    currency,
-    maximumFractionDigits: 0,
-  }).format(value);

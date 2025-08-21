@@ -19,10 +19,11 @@
         "name": "next"
       }
     ],
+    "baseUrl": ".",
     "paths": {
       "@/*": ["./src/*"]
     }
   },
-  "include": ["src", "**/*.test.ts", "**/*.test.tsx"],
+  "include": ["src", ".storybook", "**/*.test.ts", "**/*.test.tsx"],
   "exclude": ["node_modules", "dist", "storybook-static"]
 }

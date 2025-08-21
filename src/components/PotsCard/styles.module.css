@@ -1,0 +1,157 @@
+.potsCard {
+  background: #ffffff;
+  border-radius: 6rem;
+  padding: 6rem;
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+}
+
+.potsCard__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.potsCard__title {
+  margin: 0;
+  color: var(--grey-900);
+}
+
+.potsCard__cta {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  color: var(--grey-600);
+}
+
+.potsCard__ctaTitle {
+  color: var(--grey-500);
+}
+
+.potsCard__ctaIcon {
+  position: relative;
+  width: 3rem;
+  height: 3rem;
+  aspect-ratio: 1;
+}
+
+.potsCard__summary {
+  background: var(--beige-100);
+  border-radius: 6rem;
+  padding: 4rem;
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+}
+
+.potsCard__summaryIcon {
+  position: relative;
+  width: 10rem;
+  height: 10rem;
+  aspect-ratio: 1;
+}
+
+.potsCard__summaryText {
+  display: flex;
+  flex-direction: column;
+  gap: 2.75rem;
+}
+
+.potsCard__summaryLabel {
+  margin: 0;
+  color: var(--grey-500);
+}
+
+.potsCard__summaryValue {
+  margin: 0;
+  color: var(--grey-900);
+}
+
+.potsCard__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4rem;
+}
+
+.potsCard__item {
+  display: flex;
+  align-items: flex-start;
+  gap: 4rem;
+  flex: 0 0 calc(50% - 2rem);
+  max-width: calc(50% - 2rem);
+}
+
+.potsCard__accent {
+  width: 0.5rem;
+  height: 100%;
+  border-radius: 2rem;
+  flex: 0 0 auto;
+  translate: 0 var(--space-40);
+  background: var(--grey-300);
+}
+
+.potsCard__accent--default {
+  background: var(--grey-300);
+}
+.potsCard__accent--277C78 {
+  background-color: #277c78;
+} /* sec-green */
+.potsCard__accent--F2CDAC {
+  background-color: #f2cdac;
+} /* sec-yellow */
+.potsCard__accent--82C9D7 {
+  background-color: #82c9d7;
+} /* sec-cyan */
+.potsCard__accent--626070 {
+  background-color: #626070;
+} /* sec-navy */
+.potsCard__accent--C94736 {
+  background-color: #c94736;
+} /* sec-red */
+.potsCard__accent--826CB0 {
+  background-color: #826cb0;
+} /* sec-purple */
+
+.potsCard__accent--AF81BA {
+  background-color: #af81ba;
+} /* ot-purple */
+.potsCard__accent--597C7C {
+  background-color: #597c7c;
+} /* ot-turquoise/brown */
+.potsCard__accent--934F6F {
+  background-color: #934f6f;
+} /* ot-magenta */
+.potsCard__accent--3F82B2 {
+  background-color: #3f82b2;
+} /* ot-blue */
+.potsCard__accent--97A0AC {
+  background-color: #97a0ac;
+} /* ot-navy-grey */
+.potsCard__accent--7F9161 {
+  background-color: #7f9161;
+} /* ot-army-green */
+.potsCard__accent--CAB361 {
+  background-color: #cab361;
+} /* ot-gold */
+.potsCard__accent--BE6C49 {
+  background-color: #be6c49;
+} /* ot-orange */
+
+.potsCard__itemText {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.potsCard__itemLabel {
+  color: var(--grey-500);
+}
+
+.potsCard__itemValue {
+  color: var(--grey-900);
+  font-weight: var(--fw-bold) !important;
+}

@@ -1,6 +1,7 @@
 import Text from "@/components/Text";
-import { STAT_CARD_COPY, formatCurrency } from "./config";
+import { STAT_CARD_COPY } from "./config";
 import { StatCardVariant } from "@/types";
+import { formatCurrency } from "@/lib/utils";
 import styles from "./styles.module.css";
 
 export interface IStatCard {
