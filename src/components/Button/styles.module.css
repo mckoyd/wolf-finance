@@ -1,0 +1,81 @@
+/* Button (primary baseline) — spacing aligned to mockup
+   - Gap: 16px  → 4rem (4px base)
+   - Padding: 16px → 4rem (4px base)
+   - Radius: 8px → 2rem (4px base)
+   - Height: target ~53px → 13.25rem (use min-height to allow natural growth)
+   Uses only existing tokens for colors; hard-code spacing where token does not exist.
+ */
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4rem;
+  padding: 4rem;
+  min-height: 13.25rem;
+  border-radius: 2rem;
+  border: 1px solid transparent;
+  background: var(--grey-900);
+  color: var(--grey-100);
+  cursor: pointer;
+  transition: opacity 150ms ease;
+}
+
+.button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.button:focus-visible {
+  outline: 2px solid var(--sec-green);
+  outline-offset: 2px;
+}
+
+.button__label {
+  display: inline-block;
+  line-height: 1;
+}
+
+.button__iconWrapper {
+  position: relative;
+  width: 6rem;
+  height: 6rem;
+  flex: 0 0 auto;
+}
+
+.button--primary {
+  background: var(--grey-900);
+  color: #ffffff;
+  border-color: transparent;
+}
+.button--primary:not(:disabled):hover {
+  background: var(--grey-500);
+  color: var(--grey-100);
+}
+
+.button--secondary {
+  background: var(--beige-100);
+  color: var(--grey-900);
+  border-color: transparent;
+}
+.button--secondary:not(:disabled):hover {
+  background: #ffffff;
+}
+
+.button--tertiary {
+  background: transparent;
+  color: var(--grey-500);
+}
+
+.button--tiertiary:not(:disabled):hover {
+  color: var(--grey-900);
+}
+
+.button--destroy {
+  background: var(--sec-red);
+  color: #ffffff;
+}
+
+.button--destroy:not(:disabled):hover {
+  opacity: 0.9;
+}

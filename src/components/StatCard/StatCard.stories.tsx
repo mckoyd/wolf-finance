@@ -5,6 +5,7 @@ const meta: Meta<typeof StatCard> = {
   title: "Overview/StatCard",
   component: StatCard,
   parameters: {
+    layout: "padded",
     controls: {
       disable: true,
     },

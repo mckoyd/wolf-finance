@@ -51,3 +51,5 @@ export type StatCardCopy = {
   title: string;
   ariaLabel: string;
 };
+
+export type ButtonVariant = "primary" | "secondary" | "tertiary" | "destroy";
