@@ -50,7 +50,7 @@ describe("Button", () => {
     const onClick = vi.fn();
     render(
       <Button variant="primary" disabled onClick={onClick}>
-        Can't click
+        Can&apos;t click
       </Button>
     );
     fireEvent.click(screen.getByRole("button", { name: /can't click/i }));

@@ -8,7 +8,9 @@ import styles from "@/components/TransactionsCard/styles.module.css";
 import { formatCurrency, formatDate } from "@/lib/utils";
 import type { Transaction } from "@/types";
 
-vi.mock("next/navigation", () => require("next-router-mock/navigation"));
+vi.mock("next/navigation", async () => {
+  return await import("next-router-mock/navigation");
+});
 
 /** Local, stable fixture so tests don't drift with data.json changes */
 const TXNS: Transaction[] = [

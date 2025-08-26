@@ -8,7 +8,9 @@ import { POTS_COPY } from "./config";
 import type { Pot } from "@/types";
 import styles from "./styles.module.css";
 
-vi.mock("next/navigation", () => require("next-router-mock/navigation"));
+vi.mock("next/navigation", async () => {
+  return await import("next-router-mock/navigation");
+});
 import mockRouter from "next-router-mock";
 
 describe("PotsCard", () => {

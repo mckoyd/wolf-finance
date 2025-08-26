@@ -19,7 +19,7 @@ const SidebarMenu: React.FC<ISidebarMenu> = ({ activePath }) => {
         const isActive = current === href || current?.startsWith(href + "/");
         return (
           <Link
-            key={navKey}
+            key={`${navKey}-${index}`}
             href={href}
             aria-current={isActive ? "page" : undefined}
             className={`${styles.link} ${isActive ? styles.active : ""}`}

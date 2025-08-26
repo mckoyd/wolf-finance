@@ -18,7 +18,7 @@ export interface IButton {
 
 const Button: React.FC<IButton> = ({
   children,
-  variant = "solid-dark",
+  variant = "primary",
   disabled = false,
   iconRightSrc,
   onClick,
@@ -35,15 +35,18 @@ const Button: React.FC<IButton> = ({
     .filter(Boolean)
     .join(" ");
 
+  const handleClick = disabled ? undefined : onClick;
+
   return (
     <button
       type={type}
       className={classes}
       aria-label={ariaLabel}
+      aria-disabled={disabled || undefined}
       disabled={disabled}
-      onClick={onClick}
+      onClick={handleClick}
     >
-      <Text as="p" variant="preset-4" className={styles.button__label}>
+      <Text as="span" variant="preset-4" className={styles.button__label}>
         {children}
       </Text>
       {iconRightSrc && (
