@@ -60,7 +60,10 @@ const PotsCard: React.FC<IPotsCard> = ({ pots, ariaLabelOverride }) => {
             variant="preset-1"
             className={styles.potsCard__summaryValue}
           >
-            {formatCurrency(totalSaved)}
+            {formatCurrency(totalSaved, "USD", "en-US", {
+              minimumFractionDigits: 0,
+              maximumFractionDigits: 0,
+            })}
           </Text>
         </div>
       </div>
@@ -87,7 +90,10 @@ const PotsCard: React.FC<IPotsCard> = ({ pots, ariaLabelOverride }) => {
                 variant="preset-4"
                 className={styles.potsCard__itemValue}
               >
-                {formatCurrency(pot.total)}
+                {formatCurrency(pot.total, "USD", "en-US", {
+                  minimumFractionDigits: 0,
+                  maximumFractionDigits: 0,
+                })}
               </Text>
             </div>
           </li>

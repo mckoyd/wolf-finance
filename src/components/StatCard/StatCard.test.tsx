@@ -2,6 +2,7 @@ import { render, screen } from "@testing-library/react";
 import "@testing-library/jest-dom";
 import StatCard from "./index";
 import styles from "./styles.module.css";
+import { formatCurrency } from "@/lib/utils";
 
 describe("StatCard", () => {
   it("renders Balance card with accessible region, title, and formatted value", () => {
@@ -63,8 +64,13 @@ describe("StatCard", () => {
       <StatCard variant="income" value={1234} currency="EUR" locale="de-DE" />
     );
 
-    // de-DE EUR often shows "1.234 €"
-    const candidates = [/1\.234\s*€/, /€\s*1\.234/];
-    expect(candidates.some((re) => screen.queryByText(re))).toBe(true);
+    const expected = formatCurrency(1234, "EUR", "de-DE");
+    const escapeRegex = (s: string) => s.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+    const pattern = new RegExp(
+      escapeRegex(expected).replace(/\u00A0/g, "\\s?")
+    );
+
+    const region = screen.getByRole("region", { name: /income card/i });
+    expect(region).toHaveTextContent(pattern);
   });
 });

@@ -24,6 +24,12 @@
       "@/*": ["./src/*"]
     }
   },
-  "include": ["src", ".storybook", "**/*.test.ts", "**/*.test.tsx"],
+  "include": [
+    "**/*.test.ts",
+    "**/*.test.tsx",
+    ".storybook",
+    "src",
+    ".next/types/**/*.ts"
+  ],
   "exclude": ["node_modules", "dist", "storybook-static"]
 }

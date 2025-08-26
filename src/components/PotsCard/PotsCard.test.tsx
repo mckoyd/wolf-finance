@@ -32,7 +32,12 @@ describe("PotsCard", () => {
       within(region).getByText(POTS_COPY.summaryLabel)
     ).toBeInTheDocument();
     expect(
-      within(region).getByText(formatCurrency(totalSaved))
+      within(region).getByText(
+        formatCurrency(totalSaved, "USD", "en-US", {
+          minimumFractionDigits: 0,
+          maximumFractionDigits: 0,
+        })
+      )
     ).toBeInTheDocument();
   });
 
@@ -44,7 +49,14 @@ describe("PotsCard", () => {
     pots.forEach(({ name, total }) => {
       const item = within(list).getByText(name).closest("li") as HTMLElement;
       expect(item).toBeInTheDocument();
-      expect(within(item).getByText(formatCurrency(total))).toBeInTheDocument();
+      expect(
+        within(item).getByText(
+          formatCurrency(total, "USD", "en-US", {
+            minimumFractionDigits: 0,
+            maximumFractionDigits: 0,
+          })
+        )
+      ).toBeInTheDocument();
     });
   });
 
